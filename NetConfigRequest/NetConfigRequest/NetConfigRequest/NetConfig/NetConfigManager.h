@@ -22,6 +22,7 @@
 
 + (instancetype)shareInstance;
 
-- (void)request:(NSString *)modelKey response:(ResponseBlock)res;
+- (void)request:(NSString *)modelKey requestObject:(NSObject *)req responseObject:(NSObject *)res
+       response:(ResponseBlock)resblock;
 
 @end
