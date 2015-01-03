@@ -14,7 +14,13 @@
 		4E5409391A53FF2800EBCD1F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E5409381A53FF2800EBCD1F /* Images.xcassets */; };
 		4E54093C1A53FF2800EBCD1F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E54093A1A53FF2800EBCD1F /* LaunchScreen.xib */; };
 		4E5409481A53FF2800EBCD1F /* NetConfigRequestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5409471A53FF2800EBCD1F /* NetConfigRequestTests.m */; };
-		4E5409541A53FFA900EBCD1F /* NetConfigModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5409531A53FFA900EBCD1F /* NetConfigModel.m */; };
+		7977D6E71A584F6300FDCC6C /* NetConfigModelDefaultManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7977D6D11A584F6300FDCC6C /* NetConfigModelDefaultManager.m */; };
+		7977D6E81A584F6300FDCC6C /* NetConfigInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 7977D6D51A584F6300FDCC6C /* NetConfigInput.m */; };
+		7977D6E91A584F6300FDCC6C /* NetConfigManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7977D6D71A584F6300FDCC6C /* NetConfigManager.m */; };
+		7977D6EA1A584F6300FDCC6C /* NetConfigModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7977D6D91A584F6300FDCC6C /* NetConfigModel.m */; };
+		7977D6EB1A584F6300FDCC6C /* AFNetWorkRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7977D6E01A584F6300FDCC6C /* AFNetWorkRequest.m */; };
+		7977D6EC1A584F6300FDCC6C /* NetConfigRequestDataDefaultManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7977D6E31A584F6300FDCC6C /* NetConfigRequestDataDefaultManager.m */; };
+		7977D6ED1A584F6300FDCC6C /* NetConfigDefaultSign.m in Sources */ = {isa = PBXBuildFile; fileRef = 7977D6E61A584F6300FDCC6C /* NetConfigDefaultSign.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,9 +47,25 @@
 		4E5409411A53FF2800EBCD1F /* NetConfigRequestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetConfigRequestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E5409461A53FF2800EBCD1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E5409471A53FF2800EBCD1F /* NetConfigRequestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetConfigRequestTests.m; sourceTree = "<group>"; };
-		4E5409521A53FFA900EBCD1F /* NetConfigModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetConfigModel.h; sourceTree = "<group>"; };
-		4E5409531A53FFA900EBCD1F /* NetConfigModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetConfigModel.m; sourceTree = "<group>"; };
-		4E5409551A54007E00EBCD1F /* NetConfigProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetConfigProtocol.h; sourceTree = "<group>"; };
+		7977D6D01A584F6300FDCC6C /* NetConfigModelDefaultManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetConfigModelDefaultManager.h; sourceTree = "<group>"; };
+		7977D6D11A584F6300FDCC6C /* NetConfigModelDefaultManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetConfigModelDefaultManager.m; sourceTree = "<group>"; };
+		7977D6D31A584F6300FDCC6C /* NetConfigDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetConfigDefine.h; sourceTree = "<group>"; };
+		7977D6D41A584F6300FDCC6C /* NetConfigInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetConfigInput.h; sourceTree = "<group>"; };
+		7977D6D51A584F6300FDCC6C /* NetConfigInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetConfigInput.m; sourceTree = "<group>"; };
+		7977D6D61A584F6300FDCC6C /* NetConfigManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetConfigManager.h; sourceTree = "<group>"; };
+		7977D6D71A584F6300FDCC6C /* NetConfigManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetConfigManager.m; sourceTree = "<group>"; };
+		7977D6D81A584F6300FDCC6C /* NetConfigModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetConfigModel.h; sourceTree = "<group>"; };
+		7977D6D91A584F6300FDCC6C /* NetConfigModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetConfigModel.m; sourceTree = "<group>"; };
+		7977D6DA1A584F6300FDCC6C /* NetConfigModelProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetConfigModelProtocol.h; sourceTree = "<group>"; };
+		7977D6DB1A584F6300FDCC6C /* NetConfigRequestDataProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetConfigRequestDataProtocol.h; sourceTree = "<group>"; };
+		7977D6DC1A584F6300FDCC6C /* NetConfigRequestProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetConfigRequestProtocol.h; sourceTree = "<group>"; };
+		7977D6DD1A584F6300FDCC6C /* NetConfigSignProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetConfigSignProtocol.h; sourceTree = "<group>"; };
+		7977D6DF1A584F6300FDCC6C /* AFNetWorkRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetWorkRequest.h; sourceTree = "<group>"; };
+		7977D6E01A584F6300FDCC6C /* AFNetWorkRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetWorkRequest.m; sourceTree = "<group>"; };
+		7977D6E21A584F6300FDCC6C /* NetConfigRequestDataDefaultManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetConfigRequestDataDefaultManager.h; sourceTree = "<group>"; };
+		7977D6E31A584F6300FDCC6C /* NetConfigRequestDataDefaultManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetConfigRequestDataDefaultManager.m; sourceTree = "<group>"; };
+		7977D6E51A584F6300FDCC6C /* NetConfigDefaultSign.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetConfigDefaultSign.h; sourceTree = "<group>"; };
+		7977D6E61A584F6300FDCC6C /* NetConfigDefaultSign.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetConfigDefaultSign.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,11 +149,67 @@
 		4E5409511A53FF9000EBCD1F /* NetConfigRequest */ = {
 			isa = PBXGroup;
 			children = (
-				4E5409521A53FFA900EBCD1F /* NetConfigModel.h */,
-				4E5409531A53FFA900EBCD1F /* NetConfigModel.m */,
-				4E5409551A54007E00EBCD1F /* NetConfigProtocol.h */,
+				7977D6CF1A584F6300FDCC6C /* ModelDataSource */,
+				7977D6D21A584F6300FDCC6C /* NetConfig */,
+				7977D6DE1A584F6300FDCC6C /* Request */,
+				7977D6E11A584F6300FDCC6C /* RequestData */,
+				7977D6E41A584F6300FDCC6C /* Sign */,
 			);
 			path = NetConfigRequest;
+			sourceTree = "<group>";
+		};
+		7977D6CF1A584F6300FDCC6C /* ModelDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				7977D6D01A584F6300FDCC6C /* NetConfigModelDefaultManager.h */,
+				7977D6D11A584F6300FDCC6C /* NetConfigModelDefaultManager.m */,
+			);
+			path = ModelDataSource;
+			sourceTree = "<group>";
+		};
+		7977D6D21A584F6300FDCC6C /* NetConfig */ = {
+			isa = PBXGroup;
+			children = (
+				7977D6D31A584F6300FDCC6C /* NetConfigDefine.h */,
+				7977D6D41A584F6300FDCC6C /* NetConfigInput.h */,
+				7977D6D51A584F6300FDCC6C /* NetConfigInput.m */,
+				7977D6D61A584F6300FDCC6C /* NetConfigManager.h */,
+				7977D6D71A584F6300FDCC6C /* NetConfigManager.m */,
+				7977D6D81A584F6300FDCC6C /* NetConfigModel.h */,
+				7977D6D91A584F6300FDCC6C /* NetConfigModel.m */,
+				7977D6DA1A584F6300FDCC6C /* NetConfigModelProtocol.h */,
+				7977D6DB1A584F6300FDCC6C /* NetConfigRequestDataProtocol.h */,
+				7977D6DC1A584F6300FDCC6C /* NetConfigRequestProtocol.h */,
+				7977D6DD1A584F6300FDCC6C /* NetConfigSignProtocol.h */,
+			);
+			path = NetConfig;
+			sourceTree = "<group>";
+		};
+		7977D6DE1A584F6300FDCC6C /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				7977D6DF1A584F6300FDCC6C /* AFNetWorkRequest.h */,
+				7977D6E01A584F6300FDCC6C /* AFNetWorkRequest.m */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		7977D6E11A584F6300FDCC6C /* RequestData */ = {
+			isa = PBXGroup;
+			children = (
+				7977D6E21A584F6300FDCC6C /* NetConfigRequestDataDefaultManager.h */,
+				7977D6E31A584F6300FDCC6C /* NetConfigRequestDataDefaultManager.m */,
+			);
+			path = RequestData;
+			sourceTree = "<group>";
+		};
+		7977D6E41A584F6300FDCC6C /* Sign */ = {
+			isa = PBXGroup;
+			children = (
+				7977D6E51A584F6300FDCC6C /* NetConfigDefaultSign.h */,
+				7977D6E61A584F6300FDCC6C /* NetConfigDefaultSign.m */,
+			);
+			path = Sign;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,10 +312,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7977D6EA1A584F6300FDCC6C /* NetConfigModel.m in Sources */,
 				4E5409341A53FF2800EBCD1F /* ViewController.m in Sources */,
-				4E5409541A53FFA900EBCD1F /* NetConfigModel.m in Sources */,
 				4E5409311A53FF2800EBCD1F /* AppDelegate.m in Sources */,
 				4E54092E1A53FF2800EBCD1F /* main.m in Sources */,
+				7977D6ED1A584F6300FDCC6C /* NetConfigDefaultSign.m in Sources */,
+				7977D6E81A584F6300FDCC6C /* NetConfigInput.m in Sources */,
+				7977D6E71A584F6300FDCC6C /* NetConfigModelDefaultManager.m in Sources */,
+				7977D6EC1A584F6300FDCC6C /* NetConfigRequestDataDefaultManager.m in Sources */,
+				7977D6E91A584F6300FDCC6C /* NetConfigManager.m in Sources */,
+				7977D6EB1A584F6300FDCC6C /* AFNetWorkRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +512,7 @@
 				4E54094D1A53FF2800EBCD1F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4E54094E1A53FF2800EBCD1F /* Build configuration list for PBXNativeTarget "NetConfigRequestTests" */ = {
 			isa = XCConfigurationList;
@@ -436,6 +521,7 @@
 				4E5409501A53FF2800EBCD1F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
