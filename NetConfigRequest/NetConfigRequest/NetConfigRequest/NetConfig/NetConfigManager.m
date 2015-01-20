@@ -19,7 +19,7 @@
 
 @interface NetConfigManager ()
 
-- (void)request:(NSString *)modelKey response:(ResponseBlock)res;
+//- (void)request:(NSString *)modelKey response:(ResponseBlock)res;
 
 @end
 
@@ -48,12 +48,13 @@
     return self;
 }
 
-- (void)request:(NSString *)modelKey response:(ResponseBlock)res{
-    
-}
-
 - (void)request:(NSString *)modelKey requestObject:(NSObject *)req responseObject:(NSObject *)res
        response:(ResponseBlock)resblock{
+    NetConfigModel *model = [_netConfigModel getModel:modelKey];
+    
+    [_request request:@"" sign:@"" ssl:model.ssl method:model.method requestParmers:nil response:^(int code, NSString *message, id content, NSError *error) {
+        //
+    }];
     
 }
 

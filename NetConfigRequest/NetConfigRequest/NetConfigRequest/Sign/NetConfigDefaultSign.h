@@ -15,8 +15,8 @@ NetConfigSignProtocol
 >
 
 //给body中的参数使用
-+ (NSString *)signString:(NSDictionary *)dic  withUserSecrect:(NSString *)userSecrect;
++ (NSString *)signString:(NSDictionary *)dic withUserSecrect:(NSString *)userSecrect;
 //给header中的参数使用
-+ (NSString *)sha1SignString:(NSDictionary *)dic  withUserSecrect:(NSString *)userSecrect;
++ (NSString *)sha1SignString:(NSDictionary *)dic withUserSecrect:(NSString *)userSecrect;
 
 @end
