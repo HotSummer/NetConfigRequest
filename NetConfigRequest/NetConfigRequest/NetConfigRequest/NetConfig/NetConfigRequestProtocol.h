@@ -19,7 +19,6 @@ typedef void(^ResponseBlock)(int code, NSString *message, id content, NSError *e
  *  @param method  请求的方法
  *  @param request 请求的参数
  *  @param res     返回的数据
- *  @param error   请求的错误
  */
 - (void)request:(NSString *)url method:(NSString *)method requestParmers:(NSDictionary *)request response:(ResponseBlock)res;
 
@@ -31,7 +30,6 @@ typedef void(^ResponseBlock)(int code, NSString *message, id content, NSError *e
  *  @param method  请求的方法
  *  @param request 请求的参数
  *  @param res     返回的数据
- *  @param error   请求的错误
  */
 - (void)request:(NSString *)url sign:(NSString *)sign method:(NSString *)method requestParmers:(NSDictionary *)request response:(ResponseBlock)res;
 
@@ -44,7 +42,6 @@ typedef void(^ResponseBlock)(int code, NSString *message, id content, NSError *e
  *  @param method  请求的方法
  *  @param request 请求的参数
  *  @param res     返回的数据
- *  @param error   请求的错误
  */
 - (void)request:(NSString *)url sign:(NSString *)sign ssl:(NSString *)ssl method:(NSString *)method requestParmers:(NSDictionary *)request response:(ResponseBlock)res;
 
