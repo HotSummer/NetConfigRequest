@@ -14,6 +14,10 @@
 		4E5409391A53FF2800EBCD1F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E5409381A53FF2800EBCD1F /* Images.xcassets */; };
 		4E54093C1A53FF2800EBCD1F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E54093A1A53FF2800EBCD1F /* LaunchScreen.xib */; };
 		4E5409481A53FF2800EBCD1F /* NetConfigRequestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5409471A53FF2800EBCD1F /* NetConfigRequestTests.m */; };
+		4E9B1C431A70EC5500505C1D /* NetConfigDefaultReflect.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9B1C421A70EC5500505C1D /* NetConfigDefaultReflect.m */; };
+		4E9B1C4C1A71020400505C1D /* checkout.reqconfig in Resources */ = {isa = PBXBuildFile; fileRef = 4E9B1C4B1A71020400505C1D /* checkout.reqconfig */; };
+		4E9B1C511A7105F500505C1D /* NetConfigModelDefaultManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9B1C501A7105F500505C1D /* NetConfigModelDefaultManagerTest.m */; };
+		4E9B1C541A71084A00505C1D /* checkout.reqconfig in Resources */ = {isa = PBXBuildFile; fileRef = 4E9B1C531A71084A00505C1D /* checkout.reqconfig */; };
 		4EF7AAC61A6CA51000F9C100 /* NSObject+Reflection.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF7AABA1A6CA51000F9C100 /* NSObject+Reflection.m */; };
 		4EF7AAC71A6CA51000F9C100 /* ReadValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF7AABC1A6CA51000F9C100 /* ReadValue.m */; };
 		4EF7AAC81A6CA51000F9C100 /* Reflection.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF7AABF1A6CA51000F9C100 /* Reflection.m */; };
@@ -52,6 +56,13 @@
 		4E5409411A53FF2800EBCD1F /* NetConfigRequestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetConfigRequestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E5409461A53FF2800EBCD1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E5409471A53FF2800EBCD1F /* NetConfigRequestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetConfigRequestTests.m; sourceTree = "<group>"; };
+		4E9B1C411A70EC5500505C1D /* NetConfigDefaultReflect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetConfigDefaultReflect.h; sourceTree = "<group>"; };
+		4E9B1C421A70EC5500505C1D /* NetConfigDefaultReflect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetConfigDefaultReflect.m; sourceTree = "<group>"; };
+		4E9B1C451A70ECF700505C1D /* NetConfigReflectProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetConfigReflectProtocol.h; sourceTree = "<group>"; };
+		4E9B1C4B1A71020400505C1D /* checkout.reqconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = checkout.reqconfig; sourceTree = "<group>"; };
+		4E9B1C4F1A7105F500505C1D /* NetConfigModelDefaultManagerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetConfigModelDefaultManagerTest.h; sourceTree = "<group>"; };
+		4E9B1C501A7105F500505C1D /* NetConfigModelDefaultManagerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetConfigModelDefaultManagerTest.m; sourceTree = "<group>"; };
+		4E9B1C531A71084A00505C1D /* checkout.reqconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = checkout.reqconfig; sourceTree = "<group>"; };
 		4EF7AAB91A6CA51000F9C100 /* NSObject+Reflection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Reflection.h"; sourceTree = "<group>"; };
 		4EF7AABA1A6CA51000F9C100 /* NSObject+Reflection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Reflection.m"; sourceTree = "<group>"; };
 		4EF7AABB1A6CA51000F9C100 /* ReadValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadValue.h; sourceTree = "<group>"; };
@@ -125,6 +136,7 @@
 		4E54092A1A53FF2800EBCD1F /* NetConfigRequest */ = {
 			isa = PBXGroup;
 			children = (
+				4E9B1C521A71084A00505C1D /* Resource */,
 				4EF7AAB81A6CA51000F9C100 /* Reflect */,
 				4E5409511A53FF9000EBCD1F /* NetConfigRequest */,
 				4E54092F1A53FF2800EBCD1F /* AppDelegate.h */,
@@ -151,6 +163,8 @@
 		4E5409441A53FF2800EBCD1F /* NetConfigRequestTests */ = {
 			isa = PBXGroup;
 			children = (
+				4E9B1C4E1A7105D600505C1D /* NetConfigModelDefaultManagerTest */,
+				4E9B1C4A1A71020400505C1D /* Resource */,
 				4E5409471A53FF2800EBCD1F /* NetConfigRequestTests.m */,
 				4E5409451A53FF2800EBCD1F /* Supporting Files */,
 			);
@@ -168,6 +182,7 @@
 		4E5409511A53FF9000EBCD1F /* NetConfigRequest */ = {
 			isa = PBXGroup;
 			children = (
+				4E9B1C401A70EBFA00505C1D /* NetConfigReflect */,
 				7977D6CF1A584F6300FDCC6C /* ModelDataSource */,
 				7977D6D21A584F6300FDCC6C /* NetConfig */,
 				7977D6DE1A584F6300FDCC6C /* Request */,
@@ -175,6 +190,40 @@
 				7977D6E41A584F6300FDCC6C /* Sign */,
 			);
 			path = NetConfigRequest;
+			sourceTree = "<group>";
+		};
+		4E9B1C401A70EBFA00505C1D /* NetConfigReflect */ = {
+			isa = PBXGroup;
+			children = (
+				4E9B1C411A70EC5500505C1D /* NetConfigDefaultReflect.h */,
+				4E9B1C421A70EC5500505C1D /* NetConfigDefaultReflect.m */,
+			);
+			path = NetConfigReflect;
+			sourceTree = "<group>";
+		};
+		4E9B1C4A1A71020400505C1D /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				4E9B1C4B1A71020400505C1D /* checkout.reqconfig */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		4E9B1C4E1A7105D600505C1D /* NetConfigModelDefaultManagerTest */ = {
+			isa = PBXGroup;
+			children = (
+				4E9B1C4F1A7105F500505C1D /* NetConfigModelDefaultManagerTest.h */,
+				4E9B1C501A7105F500505C1D /* NetConfigModelDefaultManagerTest.m */,
+			);
+			path = NetConfigModelDefaultManagerTest;
+			sourceTree = "<group>";
+		};
+		4E9B1C521A71084A00505C1D /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				4E9B1C531A71084A00505C1D /* checkout.reqconfig */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 		4EF7AAB81A6CA51000F9C100 /* Reflect */ = {
@@ -220,6 +269,7 @@
 				7977D6DB1A584F6300FDCC6C /* NetConfigRequestDataProtocol.h */,
 				7977D6DC1A584F6300FDCC6C /* NetConfigRequestProtocol.h */,
 				7977D6DD1A584F6300FDCC6C /* NetConfigSignProtocol.h */,
+				4E9B1C451A70ECF700505C1D /* NetConfigReflectProtocol.h */,
 			);
 			path = NetConfig;
 			sourceTree = "<group>";
@@ -331,6 +381,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E9B1C541A71084A00505C1D /* checkout.reqconfig in Resources */,
 				4E5409371A53FF2800EBCD1F /* Main.storyboard in Resources */,
 				4E54093C1A53FF2800EBCD1F /* LaunchScreen.xib in Resources */,
 				4E5409391A53FF2800EBCD1F /* Images.xcassets in Resources */,
@@ -341,6 +392,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E9B1C4C1A71020400505C1D /* checkout.reqconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,6 +414,7 @@
 				7977D6E71A584F6300FDCC6C /* NetConfigModelDefaultManager.m in Sources */,
 				7977D6EC1A584F6300FDCC6C /* NetConfigRequestDataDefaultManager.m in Sources */,
 				4EF7AAC81A6CA51000F9C100 /* Reflection.m in Sources */,
+				4E9B1C431A70EC5500505C1D /* NetConfigDefaultReflect.m in Sources */,
 				7977D6E91A584F6300FDCC6C /* NetConfigManager.m in Sources */,
 				4EF7AACA1A6CA51000F9C100 /* ReflectionProperty.m in Sources */,
 				4EF7AAC91A6CA51000F9C100 /* ReflectionException.m in Sources */,
@@ -374,6 +427,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E5409481A53FF2800EBCD1F /* NetConfigRequestTests.m in Sources */,
+				4E9B1C511A7105F500505C1D /* NetConfigModelDefaultManagerTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,0 +1,100 @@
+{
+    "checkoutamount":{
+        "serverName":"neptune/checkout/calc_amount/v1",
+        "method":"POST",
+
+        "reqParam":{
+            "userToken":"1",
+            "warehouse":"1",
+            "source":"1",
+            "areaId":"VSAddressDataHandler.selectedAreaId",
+            "couponType":"VSDiscountInterface.item.availabletype",
+            "favourableId":"VSDiscountInterface.item.availablefid"
+        },
+        "resParam":{
+            "data.amount":"VSCheckoutDataHandler.checkoutamount"
+        }
+    },
+
+
+
+    "getAddressList":{
+        "serverName":"neptune/address/get_list/v1",
+        "method":"GET",
+        "reqParam":{
+			"userToken":"1"
+		},
+		"resParam":{
+            "data":"VSAddressDataHandler.addressList"
+        }
+    },
+
+    "addAddress":{
+        "serverName":"neptune/address/add/v1",
+        "method":"POST",
+        "reqParam":{
+            "userToken":"1",
+            "consignee":"VSAddressDataHandler.modifyandAddAddressModel.consignee",
+            "areaId":"VSAddressDataHandler.modifyandAddAddressModel.areaId",
+            "areaName":"VSAddressDataHandler.modifyandAddAddressModel.areaName",
+            "address":"VSAddressDataHandler.modifyandAddAddressModel.address",
+            "postCode":"VSAddressDataHandler.modifyandAddAddressModel.postCode",
+            "mobile":"VSAddressDataHandler.modifyandAddAddressModel.mobile",
+            "transportDay":"VSAddressDataHandler.modifyandAddAddressModel.transportDay"
+        },
+        "resParam":{
+            
+        }
+    },
+
+    "delAddress":{
+
+        "serverName":"neptune/address/delete/v1",
+        "method":"POST",
+        "reqParam":{
+            "userToken":"1",
+            "addressId":"VSAddressDataHandler.modifyandAddAddressModel.addressId"
+        },
+        "resParam":{
+            
+        }
+
+    },
+
+    "updateAddress":{
+
+        "serverName":"neptune/address/update/v1",
+        "method":"POST",
+        "reqParam":{
+            "userToken" : "1",
+            "consignee":"VSAddressDataHandler.modifyandAddAddressModel.consignee",
+            "areaId":"VSAddressDataHandler.modifyandAddAddressModel.areaId",
+            "address":"VSAddressDataHandler.modifyandAddAddressModel.address",
+            "addressId":"VSAddressDataHandler.modifyandAddAddressModel.addressId",
+            "postCode":"VSAddressDataHandler.modifyandAddAddressModel.postCode",
+            "mobile":"VSAddressDataHandler.modifyandAddAddressModel.mobile",
+            "transportDay":"VSAddressDataHandler.modifyandAddAddressModel.transportDay"
+        },
+        "resParam":{
+        
+        }
+
+
+
+    },
+
+
+    "getAddressTemplet":{
+        "serverName":"http://n.myopen.vip.com/address/address",
+        "method":"get",
+        "reqParam":{
+            "areaid":"VSAddressTempletHandler.areaId"
+        },
+        "resParam":{
+            "list":"VSAddressTempletHandler.areaTempList",
+            "info":"VSAddressTempletHandler.areaTempInfo"
+        }
+    }
+}
+
+
