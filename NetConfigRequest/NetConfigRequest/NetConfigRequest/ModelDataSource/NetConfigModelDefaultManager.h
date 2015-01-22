@@ -14,6 +14,13 @@
 NetConfigModelProtocol
 >
 
+/**
+ *  根据指定的key获取对应的model
+ *
+ *  @param configModel 映射model对应的key
+ *
+ *  @return 映射model
+ */
 - (NetConfigModel *)getModel:(NSString *)modelKey;
 
 @end

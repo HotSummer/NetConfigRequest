@@ -20,8 +20,6 @@
 
 @interface NetConfigManager ()
 
-//- (void)request:(NSString *)modelKey response:(ResponseBlock)res;
-
 @end
 
 @implementation NetConfigManager
@@ -54,7 +52,11 @@
        response:(ResponseBlock)resblock{
     NetConfigModel *model = [_netConfigModel getModel:modelKey];
     NSDictionary *dicRequest = [_netConfigReflect requestDataFromConfig:model requestObject:req];
-    [_request request:@"" sign:@"" ssl:model.ssl method:model.method requestParmers:dicRequest response:^(int code, NSString *message, id content, NSError *error) {
+    
+    NSString *url = [_netConfigRequestData urlByModel:model];
+    NSString *ssl = [_netConfigRequestData sslByModel:model];
+    
+    [_request request:url sign:@"" ssl:ssl method:model.method requestParmers:dicRequest response:^(int code, NSString *message, id content, NSError *error) {
         [_netConfigReflect responseObjectFromConfig:model contentData:content responseObject:res];
         resblock(code, message, content, error);
     }];

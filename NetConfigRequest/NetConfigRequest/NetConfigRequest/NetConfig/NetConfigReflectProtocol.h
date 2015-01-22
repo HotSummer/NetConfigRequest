@@ -9,9 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "NetConfigModel.h"
 
-
 @protocol NetConfigReflectProtocol <NSObject>
-
 
 /**
  *  根据配制数据（configModel）和对象（requestObj， 请求数据的来源）生成请求数据（NSDictionary）

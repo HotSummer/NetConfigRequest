@@ -26,6 +26,7 @@
     return self;
 }
 
+//从文件中加载数据
 - (void)loadFile
 {
     NSString *homeDir = [[NSBundle mainBundle] resourcePath];
@@ -63,6 +64,7 @@
     }];
 }
 
+//将制定文件映射到内存中的model
 -(void)setConfigModel:(NSString*)filePath{
     if (![[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
         NSLog(@"file not");

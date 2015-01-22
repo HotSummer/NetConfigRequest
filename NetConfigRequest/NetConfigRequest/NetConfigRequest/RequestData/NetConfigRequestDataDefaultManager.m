@@ -18,4 +18,12 @@
     return nil;
 }
 
+- (NSString *)urlByModel:(NetConfigModel *)model{
+    return @"";
+}
+
+- (NSString *)sslByModel:(NetConfigModel *)model{
+    return @"";
+}
+
 @end
