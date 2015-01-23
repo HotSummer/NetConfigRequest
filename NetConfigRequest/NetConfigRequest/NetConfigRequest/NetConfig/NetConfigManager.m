@@ -54,13 +54,12 @@
     NSDictionary *dicRequest = [_netConfigReflect requestDataFromConfig:model requestObject:req];
     
     NSString *url = [_netConfigRequestData urlByModel:model];
-    NSString *ssl = [_netConfigRequestData sslByModel:model];
+    BOOL ssl = [_netConfigRequestData sslByModel:model];
     
     [_request request:url sign:@"" ssl:ssl method:model.method requestParmers:dicRequest response:^(int code, NSString *message, id content, NSError *error) {
         [_netConfigReflect responseObjectFromConfig:model contentData:content responseObject:res];
         resblock(code, message, content, error);
     }];
-    
 }
 
 - (void)request:(NSString *)modelKey requestObject:(NSObject *)req responseClass:(NSString *)className response:(ResponseBlock)resblock{

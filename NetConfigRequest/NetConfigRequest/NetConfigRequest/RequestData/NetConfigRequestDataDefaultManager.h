@@ -17,8 +17,23 @@ NetConfigRequestDataProtocol
 - (NSString *)url;
 - (NSDictionary *)baseRequestData;
 
+/**
+ *  获取网络配制model的请求url
+ *
+ *  @param model 网络配制model
+ *
+ *  @return 请求url
+ */
 - (NSString *)urlByModel:(NetConfigModel *)model;
-- (NSString *)sslByModel:(NetConfigModel *)model;
+
+/**
+ *  根据网络配制model判断是不是需要证书签名
+ *
+ *  @param model 网络配制model
+ *
+ *  @return YES or NO
+ */
+- (BOOL)sslByModel:(NetConfigModel *)model;
 
 
 @end

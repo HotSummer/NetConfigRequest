@@ -18,6 +18,6 @@ NetConfigRequestProtocol
 
 - (void)request:(NSString *)url sign:(NSString *)sign method:(NSString *)method requestParmers:(NSDictionary *)request response:(ResponseBlock)res;
 
-- (void)request:(NSString *)url sign:(NSString *)sign ssl:(NSString *)ssl method:(NSString *)method requestParmers:(NSDictionary *)request response:(ResponseBlock)res;
+- (void)request:(NSString *)url sign:(NSString *)sign ssl:(BOOL)ssl method:(NSString *)method requestParmers:(NSDictionary *)request response:(ResponseBlock)res;
 
 @end

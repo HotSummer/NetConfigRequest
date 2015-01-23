@@ -10,39 +10,47 @@
 
 @implementation NetConfigInput
 
-- (NSString *)userToken{
++ (NSString *)urlHttp{
+    return @"http://";
+}
+
++ (NSString *)urlHttps{
+    return @"https://";
+}
+
++ (NSString *)userToken{
     return @"testUserToken";
 }
 
-- (NSString *)userSecret{
++ (NSString *)userSecret{
     return @"testSecret";
 }
 
-- (NSString *)userId{
++ (NSString *)userId{
     return @"testUserId";
 }
 
-- (NSString *)apiKey{
++ (NSString *)apiKey{
     return @"testApiKey";
 }
 
-- (NSString *)apiSecrect{
++ (NSString *)apiSecrect{
     return @"testApiSecrect";
 }
 
-- (NSString *)source{
++ (NSString *)source{
     return @"testSource";
 }
 
-- (NSString *)appName{
++ (NSString *)appName{
     return @"testAppName";
 }
 
-- (NSString *)appVersion{
++ (NSString *)appVersion{
     return @"testAppVersion";
 }
 
-- (NSString *)warehouse{
++ (NSString *)warehouse{
     return @"testWarehouse";
 }
 

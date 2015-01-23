@@ -38,12 +38,12 @@ typedef void(^ResponseBlock)(int code, NSString *message, id content, NSError *e
  *
  *  @param url     请求的url
  *  @param sign    请求的签名
- *  @param ssl     请求的ssl
+ *  @param ssl     是否需要身份认证
  *  @param method  请求的方法
  *  @param request 请求的参数
  *  @param res     返回的数据
  */
-- (void)request:(NSString *)url sign:(NSString *)sign ssl:(NSString *)ssl method:(NSString *)method requestParmers:(NSDictionary *)request response:(ResponseBlock)res;
+- (void)request:(NSString *)url sign:(NSString *)sign ssl:(BOOL)ssl method:(NSString *)method requestParmers:(NSDictionary *)request response:(ResponseBlock)res;
 
 
 @end

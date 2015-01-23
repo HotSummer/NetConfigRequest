@@ -7,6 +7,7 @@
 //
 
 #import "NetConfigRequestDataDefaultManager.h"
+#import "NetConfigInput.h"
 
 @implementation NetConfigRequestDataDefaultManager
 
@@ -19,11 +20,16 @@
 }
 
 - (NSString *)urlByModel:(NetConfigModel *)model{
-    return @"";
+    NSString *url = [NetConfigInput urlHttp];
+    
+    return [NSString stringWithFormat:@"%@%@", url, model.serverName];//@"";
 }
 
-- (NSString *)sslByModel:(NetConfigModel *)model{
-    return @"";
+- (BOOL)sslByModel:(NetConfigModel *)model{
+    if (model.ssl.length > 0 && [model.ssl isEqualToString:@"1"]) {
+        return YES;
+    }
+    return NO;
 }
 
 @end

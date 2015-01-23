@@ -13,14 +13,16 @@
  */
 @interface NetConfigInput : NSObject
 
-- (NSString *)userToken;
-- (NSString *)userSecret;
-- (NSString *)userId;
-- (NSString *)apiKey;
-- (NSString *)apiSecrect;
-- (NSString *)source;
-- (NSString *)appName;
-- (NSString *)appVersion;
-- (NSString *)warehouse;
++ (NSString *)urlHttp;
++ (NSString *)urlHttps;
++ (NSString *)userToken;
++ (NSString *)userSecret;
++ (NSString *)userId;
++ (NSString *)apiKey;
++ (NSString *)apiSecrect;
++ (NSString *)source;
++ (NSString *)appName;
++ (NSString *)appVersion;
++ (NSString *)warehouse;
 
 @end
