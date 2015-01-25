@@ -433,7 +433,7 @@ static const char* getPropertyType(objc_property_t property) {
  *  @param requestObject 请求的对象
  *  @param responseObj   接收返回数据的对象，使用配置文件中的类名+shareInstance的方法获取到该类
  */
-+(void)requsetConfig:(BaseNetwork*)config requestObj:(NSObject *)requestObject :(void (^)(NSInteger code,NSString *msg)) callBack{
++(void)requsetConfig:(BaseNetwork *)config requestObj:(NSObject *)requestObject :(void (^)(NSInteger code,NSString *msg))callBack{
     NSMutableDictionary *parmers = [BFMRequest assembleRequestValue:config :callBack request:requestObject];
     NSString *url = [NSString stringWithFormat:@"%@%@",VSSERVERURL,config.url];
     

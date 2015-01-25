@@ -12,8 +12,8 @@
 
 @required
 //给body中的参数使用
-+ (NSString *)signString:(NSDictionary *)dic  withUserSecrect:(NSString *)userSecrect;
+- (NSString *)signString:(NSDictionary *)dic;
 //给header中的参数使用
-+ (NSString *)sha1SignString:(NSDictionary *)dic  withUserSecrect:(NSString *)userSecrect;
+- (NSString *)headerSignString:(NSDictionary *)dic;
 
 @end

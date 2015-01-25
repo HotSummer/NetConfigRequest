@@ -10,12 +10,14 @@
 #import "NetConfigModel.h"
 #import "NetConfigSignProtocol.h"
 #import "NetConfigModelProtocol.h"
+#import "NetConfigInputProtocol.h"
 #import "NetConfigReflectProtocol.h"
 #import "NetConfigRequestProtocol.h"
 #import "NetConfigRequestDataProtocol.h"
 
 @interface NetConfigManager : NSObject
 
+@property(nonatomic, strong) id<NetConfigInputProtocol> netConfigInput;
 @property(nonatomic, strong) id<NetConfigRequestProtocol> request;
 @property(nonatomic, strong) id<NetConfigReflectProtocol> netConfigReflect;
 @property(nonatomic, strong) id<NetConfigModelProtocol> netConfigModel;
