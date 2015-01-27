@@ -30,6 +30,9 @@
 		7977D6EB1A584F6300FDCC6C /* AFNetWorkRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7977D6E01A584F6300FDCC6C /* AFNetWorkRequest.m */; };
 		7977D6EC1A584F6300FDCC6C /* NetConfigRequestDataDefaultManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7977D6E31A584F6300FDCC6C /* NetConfigRequestDataDefaultManager.m */; };
 		7977D6ED1A584F6300FDCC6C /* NetConfigDefaultSign.m in Sources */ = {isa = PBXBuildFile; fileRef = 7977D6E61A584F6300FDCC6C /* NetConfigDefaultSign.m */; };
+		79D857B21A77EA560088B2CA /* NetConfigDefaultReflectTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D857B11A77EA560088B2CA /* NetConfigDefaultReflectTest.m */; };
+		79D857B51A77EA870088B2CA /* VSAddressDataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D857B41A77EA870088B2CA /* VSAddressDataHandler.m */; };
+		79D857B81A77EB380088B2CA /* VSDiscountInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D857B71A77EB380088B2CA /* VSDiscountInterface.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +99,12 @@
 		7977D6E31A584F6300FDCC6C /* NetConfigRequestDataDefaultManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetConfigRequestDataDefaultManager.m; sourceTree = "<group>"; };
 		7977D6E51A584F6300FDCC6C /* NetConfigDefaultSign.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetConfigDefaultSign.h; sourceTree = "<group>"; };
 		7977D6E61A584F6300FDCC6C /* NetConfigDefaultSign.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetConfigDefaultSign.m; sourceTree = "<group>"; };
+		79D857B01A77EA560088B2CA /* NetConfigDefaultReflectTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetConfigDefaultReflectTest.h; sourceTree = "<group>"; };
+		79D857B11A77EA560088B2CA /* NetConfigDefaultReflectTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetConfigDefaultReflectTest.m; sourceTree = "<group>"; };
+		79D857B31A77EA860088B2CA /* VSAddressDataHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSAddressDataHandler.h; sourceTree = "<group>"; };
+		79D857B41A77EA870088B2CA /* VSAddressDataHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSAddressDataHandler.m; sourceTree = "<group>"; };
+		79D857B61A77EB380088B2CA /* VSDiscountInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSDiscountInterface.h; sourceTree = "<group>"; };
+		79D857B71A77EB380088B2CA /* VSDiscountInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSDiscountInterface.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +173,7 @@
 		4E5409441A53FF2800EBCD1F /* NetConfigRequestTests */ = {
 			isa = PBXGroup;
 			children = (
+				79D857AF1A77EA260088B2CA /* NetConfigReflectTest */,
 				4E9B1C4E1A7105D600505C1D /* NetConfigModelDefaultManagerTest */,
 				4E9B1C4A1A71020400505C1D /* Resource */,
 				4E5409471A53FF2800EBCD1F /* NetConfigRequestTests.m */,
@@ -311,6 +321,19 @@
 			path = Sign;
 			sourceTree = "<group>";
 		};
+		79D857AF1A77EA260088B2CA /* NetConfigReflectTest */ = {
+			isa = PBXGroup;
+			children = (
+				79D857B01A77EA560088B2CA /* NetConfigDefaultReflectTest.h */,
+				79D857B11A77EA560088B2CA /* NetConfigDefaultReflectTest.m */,
+				79D857B31A77EA860088B2CA /* VSAddressDataHandler.h */,
+				79D857B41A77EA870088B2CA /* VSAddressDataHandler.m */,
+				79D857B61A77EB380088B2CA /* VSDiscountInterface.h */,
+				79D857B71A77EB380088B2CA /* VSDiscountInterface.m */,
+			);
+			path = NetConfigReflectTest;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -436,8 +459,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79D857B51A77EA870088B2CA /* VSAddressDataHandler.m in Sources */,
+				79D857B21A77EA560088B2CA /* NetConfigDefaultReflectTest.m in Sources */,
 				4E5409481A53FF2800EBCD1F /* NetConfigRequestTests.m in Sources */,
 				4E9B1C511A7105F500505C1D /* NetConfigModelDefaultManagerTest.m in Sources */,
+				79D857B81A77EB380088B2CA /* VSDiscountInterface.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

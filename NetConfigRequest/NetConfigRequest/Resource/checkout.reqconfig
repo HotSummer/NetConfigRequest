@@ -7,9 +7,7 @@
             "userToken":"1",
             "warehouse":"1",
             "source":"1",
-            "areaId":"VSAddressDataHandler.selectedAreaId",
-            "couponType":"VSDiscountInterface.item.availabletype",
-            "favourableId":"VSDiscountInterface.item.availablefid"
+            "areaId":"VSAddressDataHandler.selectedAreaId"
         },
         "resParam":{
             "data.amount":"VSCheckoutDataHandler.checkoutamount"

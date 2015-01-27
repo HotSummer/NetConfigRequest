@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 #import "NetConfigModelDefaultManagerTest.h"
+#import "NetConfigDefaultReflectTest.h"
 
 @interface NetConfigRequestTests : XCTestCase
 
@@ -28,8 +29,8 @@
 
 - (void)testExample {
     // This is an example of a functional test case.
-    [NetConfigModelDefaultManagerTest test];
-    
+//    [NetConfigModelDefaultManagerTest test];
+    [NetConfigDefaultReflectTest test];
     
     XCTAssert(YES, @"Pass");
 }

@@ -20,7 +20,7 @@
 }
 
 - (NSString *)urlByModel:(NetConfigModel *)model{
-    NSString *url = [NetConfigInput urlHttp];
+    NSString *url = @"";//[NetConfigInput urlHttp];
     
     return [NSString stringWithFormat:@"%@%@", url, model.serverName];//@"";
 }
