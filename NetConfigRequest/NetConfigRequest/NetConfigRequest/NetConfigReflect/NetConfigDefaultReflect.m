@@ -34,9 +34,9 @@
                 }
             }
             
-            //第二部获取对应的属性值
+            //第二步获取对应的属性值
             if (!object) {
-                NSLog(@"为找到该对象");
+                NSLog(@"未找到该对象%@", strClass);
             }else{
                 for (int i=1; i<array.count; i++) {
                     object = [object valueForKey:array[i]];
@@ -50,7 +50,22 @@
     return paramers;
 }
 
+- (NSDictionary *)requestDataFromConfig:(NetConfigModel *)configModel requestObjects:(NSArray *)requestObjs{
+    NSMutableDictionary *mutableDicRequest = [NSMutableDictionary dictionary];
+    for (NSObject *object in requestObjs) {
+        NSDictionary *dicRequest = [self requestDataFromConfig:configModel requestObject:object];
+        [mutableDicRequest addEntriesFromDictionary:dicRequest];
+    }
+    return mutableDicRequest;
+}
+
 - (void)responseObjectFromConfig:(NetConfigModel *)configModel contentData:(id)contentData responseObject:(NSObject *)responseObject{
+}
+
+- (void)responseObjectFromConfig:(NetConfigModel *)configModel contentData:(id)contentData responseObjects:(NSArray *)responseObjects{
+    for (NSObject *object in responseObjects) {
+        [self responseObjectFromConfig:configModel contentData:contentData responseObject:object];
+    }
 }
 
 

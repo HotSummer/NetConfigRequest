@@ -25,6 +25,16 @@ NetConfigReflectProtocol
 - (NSDictionary *)requestDataFromConfig:(NetConfigModel *)configModel requestObject:(NSObject *)requestObj;
 
 /**
+ *  根据配制数据（configModel）和对象数组（requestObj， 请求数据的来源）生成请求数据（NSDictionary）
+ *
+ *  @param configModel 配制数据
+ *  @param requestObjs 对象数组
+ *
+ *  @return 请求数据的数据字典
+ */
+- (NSDictionary *)requestDataFromConfig:(NetConfigModel *)configModel requestObjects:(NSArray *)requestObjs;
+
+/**
  *  根据配制数据（configModel）,数据（contentData） 和对象（responseObject， 返回数据的对象）填充返回对象
  *
  *  @param configModel    配制数据

@@ -40,6 +40,16 @@
 /**
  *  网络请求
  *
+ *  @param modelKey 请求的配制model
+ *  @param reqs     请求的对象数组
+ *  @param ress     返回的对象数组
+ *  @param resblock 回调
+ */
+- (void)request:(NSString *)modelKey requestObjects:(NSArray *)reqs responseObjects:(NSArray *)ress response:(ResponseBlock)resblock;
+
+/**
+ *  网络请求
+ *
  *  @param modelKey  请求的配制model
  *  @param req       请求对象
  *  @param className 返回对象类名

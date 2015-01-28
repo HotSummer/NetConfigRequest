@@ -26,4 +26,23 @@
     NSLog(@"%@", dic);
 }
 
++ (void)test2{
+    NetConfigModelDefaultManager *modelManager = [[NetConfigModelDefaultManager alloc] init];
+    NetConfigModel *model = [modelManager getModel:@"checkoutamount"];
+    
+    VSAddressDataHandler *handler = [[VSAddressDataHandler alloc] init];
+    handler.selectedAreaId = @"ssssss";
+    
+    VSDiscountInterface *discountInterface = [[VSDiscountInterface alloc] init];
+    Item *item = [[Item alloc] init];
+    item.availabletype = @"test123";
+    item.availablefid = @"q232321";
+    discountInterface.item = item;
+    
+    NSArray *arrObjects = @[handler, discountInterface];
+    NetConfigDefaultReflect *netConfigReflect = [[NetConfigDefaultReflect alloc] init];
+    NSDictionary *dic = [netConfigReflect requestDataFromConfig:model requestObjects:arrObjects];
+    NSLog(@"%@", dic);
+}
+
 @end

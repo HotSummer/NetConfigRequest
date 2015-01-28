@@ -9,7 +9,10 @@
 #import <Foundation/Foundation.h>
 
 @interface NetConfigDefaultReflectTest : NSObject
-
+//测试requestDataFromConfig:requestObject:
 + (void)test;
+
+//测试requestDataFromConfig:requestObjects:
++ (void)test2;
 
 @end
