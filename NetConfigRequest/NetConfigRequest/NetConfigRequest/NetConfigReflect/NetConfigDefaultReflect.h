@@ -44,4 +44,13 @@ NetConfigReflectProtocol
  */
 - (void)responseObjectFromConfig:(NetConfigModel *)configModel contentData:(id)contentData responseObject:(NSObject *)responseObject;
 
+/**
+ *  根据配制数据（configModel）,数据（contentData） 和对象数组（responseObject， 返回数据的对象）填充返回对象数组
+ *
+ *  @param configModel     配制数据
+ *  @param contentData     数据
+ *  @param responseObjects 对象数组
+ */
+- (void)responseObjectFromConfig:(NetConfigModel *)configModel contentData:(id)contentData responseObjects:(NSArray *)responseObjects;
+
 @end

@@ -15,4 +15,7 @@
 //测试requestDataFromConfig:requestObjects:
 + (void)test2;
 
+//测试responseObjectFromConfig:contentData:responseObject:
++ (void)test3;
+
 @end

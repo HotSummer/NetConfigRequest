@@ -12,4 +12,12 @@
 #define UserDefault YES
 #define NetConfigDebug YES
 
+#define Debug
+
+#ifdef Debug
+#define NCLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+#else
+#define NCLog(xx, ...) ((void)0)
+#endif
+
 #endif

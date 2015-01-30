@@ -24,7 +24,7 @@
             UIAlertView *alertview = [[UIAlertView alloc] initWithTitle:strException message:nil delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
             [alertview show];
             
-            NSLog(@"%@", strException);
+            RLog(@"%@", strException);
 #endif
             return NO;
         }
@@ -51,7 +51,7 @@
         UIAlertView *alertview = [[UIAlertView alloc] initWithTitle:strException message:nil delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
         [alertview show];
         
-        NSLog(@"%@", strException);
+        RLog(@"%@", strException);
 #endif
     }
     
@@ -67,7 +67,7 @@
         UIAlertView *alertview = [[UIAlertView alloc] initWithTitle:strException message:nil delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
         [alertview show];
         
-        NSLog(@"%@", strException);
+        RLog(@"%@", strException);
 #endif
         return NO;
     }
@@ -118,7 +118,7 @@
             UIAlertView *alertview = [[UIAlertView alloc] initWithTitle:strException message:nil delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
             [alertview show];
             
-            NSLog(@"%@", strException);
+            RLog(@"%@", strException);
 #endif
             return NO;
         }
@@ -130,7 +130,7 @@
     NSString *message = [NSString stringWithFormat:@"%@数组里面多个自定义对象无法解析", class];
     UIAlertView *alertview = [[UIAlertView alloc] initWithTitle:message message:nil delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
     [alertview show];
-    NSLog(@"%@", message);
+    RLog(@"%@", message);
 #endif
 }
 

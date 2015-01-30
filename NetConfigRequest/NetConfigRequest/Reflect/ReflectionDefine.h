@@ -11,4 +11,12 @@
 
 #define ShowException
 
+#define Debug
+
+#ifdef Debug
+#define RLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+#else
+#define RLog(xx, ...) ((void)0)
+#endif
+
 #endif

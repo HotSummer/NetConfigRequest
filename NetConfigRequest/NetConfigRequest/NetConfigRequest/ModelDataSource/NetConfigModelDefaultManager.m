@@ -9,6 +9,7 @@
 #import "NetConfigModelDefaultManager.h"
 #import "Reflection.h"
 #import "NetConfigModel.h"
+#import "NetConfigDefine.h"
 
 @interface NetConfigModelDefaultManager ()
 
@@ -67,12 +68,12 @@
 //将制定文件映射到内存中的model
 -(void)setConfigModel:(NSString*)filePath{
     if (![[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
-        NSLog(@"file not");
+        NCLog(@"file not");
     }
     NSError *error;
     NSDictionary *configs = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:filePath] options:NSJSONReadingMutableContainers error:&error];
     if (error) {
-        NSLog(@"%@",error.description);
+        NCLog(@"%@",error.description);
     }else{
         if (configs) {
             [configs enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {

@@ -9,8 +9,11 @@
 #import "NetConfigDefaultReflectTest.h"
 #import "NetConfigModelDefaultManager.h"
 #import "NetConfigDefaultReflect.h"
+#import "VSCheckoutDataHandler.h"
 #import "VSAddressDataHandler.h"
 #import "VSDiscountInterface.h"
+#import "NetConfigDefine.h"
+#import "VSTestObject.h"
 
 @implementation NetConfigDefaultReflectTest
 
@@ -23,12 +26,12 @@
     
     NetConfigDefaultReflect *netConfigReflect = [[NetConfigDefaultReflect alloc] init];
     NSDictionary *dic = [netConfigReflect requestDataFromConfig:model requestObject:handler];
-    NSLog(@"%@", dic);
+    NCLog(@"%@", dic);
 }
 
 + (void)test2{
-    NetConfigModelDefaultManager *modelManager = [[NetConfigModelDefaultManager alloc] init];
-    NetConfigModel *model = [modelManager getModel:@"checkoutamount"];
+    NetConfigModel *model1 = [[NetConfigModel alloc] init];
+    model1.reqParam = @{@"areaIds":@"VSAddressDataHandler.selectedAreaId", @"couponType":@"VSDiscountInterface.item.availabletypes", @"favourableId":@"VSDiscountInterface.item.availablefid"};
     
     VSAddressDataHandler *handler = [[VSAddressDataHandler alloc] init];
     handler.selectedAreaId = @"ssssss";
@@ -39,10 +42,30 @@
     item.availablefid = @"q232321";
     discountInterface.item = item;
     
-    NSArray *arrObjects = @[handler, discountInterface];
+    VSTestObject *testOject = [[VSTestObject alloc] init];
+    testOject.test = @"hahahahah";
+    
+    NSArray *arrObjects = @[handler, discountInterface, testOject];
     NetConfigDefaultReflect *netConfigReflect = [[NetConfigDefaultReflect alloc] init];
-    NSDictionary *dic = [netConfigReflect requestDataFromConfig:model requestObjects:arrObjects];
-    NSLog(@"%@", dic);
+    NSDictionary *dic = [netConfigReflect requestDataFromConfig:model1 requestObjects:arrObjects];
+    NCLog(@"%@", dic);
+}
+
++ (void)test3{
+    NetConfigModel *model1 = [[NetConfigModel alloc] init];
+    // "data.amount":"VSCheckoutDataHandler.checkoutamount"
+    model1.resParam = @{@"data.amount":@"VSCheckoutDataHandler.checkoutamount"};
+    
+    NSDictionary *dic = @{@"data":@{@"amount":@"hehehehehhe"}};
+    
+    VSCheckoutDataHandler *checkoutDataHandler = [[VSCheckoutDataHandler alloc] init];
+    
+    NetConfigDefaultReflect *netConfigReflect = [[NetConfigDefaultReflect alloc] init];
+    
+    [netConfigReflect responseObjectFromConfig:model1 contentData:dic responseObject:checkoutDataHandler];
+    NCLog(@"%@", checkoutDataHandler.checkoutamount.checkoutamountTest);
+//    netConfigReflect
+    //- (void)responseObjectFromConfig:(NetConfigModel *)configModel contentData:(id)contentData responseObject:(NSObject *)responseObject
 }
 
 @end

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E37B4211A79FD6A002E58D4 /* VSTestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E37B4201A79FD6A002E58D4 /* VSTestObject.m */; };
+		4E37B4451A7B80D3002E58D4 /* VSCheckoutDataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E37B4441A7B80D3002E58D4 /* VSCheckoutDataHandler.m */; };
 		4E54092E1A53FF2800EBCD1F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E54092D1A53FF2800EBCD1F /* main.m */; };
 		4E5409311A53FF2800EBCD1F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5409301A53FF2800EBCD1F /* AppDelegate.m */; };
 		4E5409341A53FF2800EBCD1F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5409331A53FF2800EBCD1F /* ViewController.m */; };
@@ -46,6 +48,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4E37B41F1A79FD6A002E58D4 /* VSTestObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSTestObject.h; sourceTree = "<group>"; };
+		4E37B4201A79FD6A002E58D4 /* VSTestObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSTestObject.m; sourceTree = "<group>"; };
+		4E37B4431A7B80D3002E58D4 /* VSCheckoutDataHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSCheckoutDataHandler.h; sourceTree = "<group>"; };
+		4E37B4441A7B80D3002E58D4 /* VSCheckoutDataHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSCheckoutDataHandler.m; sourceTree = "<group>"; };
 		4E5409281A53FF2800EBCD1F /* NetConfigRequest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetConfigRequest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E54092C1A53FF2800EBCD1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E54092D1A53FF2800EBCD1F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -330,6 +336,10 @@
 				79D857B41A77EA870088B2CA /* VSAddressDataHandler.m */,
 				79D857B61A77EB380088B2CA /* VSDiscountInterface.h */,
 				79D857B71A77EB380088B2CA /* VSDiscountInterface.m */,
+				4E37B41F1A79FD6A002E58D4 /* VSTestObject.h */,
+				4E37B4201A79FD6A002E58D4 /* VSTestObject.m */,
+				4E37B4431A7B80D3002E58D4 /* VSCheckoutDataHandler.h */,
+				4E37B4441A7B80D3002E58D4 /* VSCheckoutDataHandler.m */,
 			);
 			path = NetConfigReflectTest;
 			sourceTree = "<group>";
@@ -460,6 +470,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				79D857B51A77EA870088B2CA /* VSAddressDataHandler.m in Sources */,
+				4E37B4451A7B80D3002E58D4 /* VSCheckoutDataHandler.m in Sources */,
+				4E37B4211A79FD6A002E58D4 /* VSTestObject.m in Sources */,
 				79D857B21A77EA560088B2CA /* NetConfigDefaultReflectTest.m in Sources */,
 				4E5409481A53FF2800EBCD1F /* NetConfigRequestTests.m in Sources */,
 				4E9B1C511A7105F500505C1D /* NetConfigModelDefaultManagerTest.m in Sources */,
