@@ -54,7 +54,7 @@
 + (void)test3{
     NetConfigModel *model1 = [[NetConfigModel alloc] init];
     // "data.amount":"VSCheckoutDataHandler.checkoutamount"
-    model1.resParam = @{@"data.amount":@"VSCheckoutDataHandler.checkoutamount"};
+    model1.resParam = @{@"data":@"VSCheckoutDataHandler.checkoutamount"};
     
     NSDictionary *dic = @{@"data":@{@"amount":@"hehehehehhe"}};
     
@@ -63,9 +63,8 @@
     NetConfigDefaultReflect *netConfigReflect = [[NetConfigDefaultReflect alloc] init];
     
     [netConfigReflect responseObjectFromConfig:model1 contentData:dic responseObject:checkoutDataHandler];
-    NCLog(@"%@", checkoutDataHandler.checkoutamount.checkoutamountTest);
-//    netConfigReflect
-    //- (void)responseObjectFromConfig:(NetConfigModel *)configModel contentData:(id)contentData responseObject:(NSObject *)responseObject
+    NCLog(@"%@", checkoutDataHandler.checkoutamount.amount);
+    
 }
 
 @end

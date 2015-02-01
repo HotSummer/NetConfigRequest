@@ -10,7 +10,7 @@
 
 @interface Checkoutamount : NSObject
 
-@property(nonatomic, strong) NSString *checkoutamountTest;
+@property(nonatomic, strong) NSString *amount;
 
 @end
 

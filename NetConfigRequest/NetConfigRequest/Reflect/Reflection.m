@@ -61,6 +61,8 @@
                 }
             }
         }
+    }else{
+        *object = content;
     }
 }
 
