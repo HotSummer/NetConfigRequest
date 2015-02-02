@@ -125,6 +125,22 @@
     }];
 }
 
+- (void)responseObjectFromConfig:(NetConfigModel *)configModel contentData:(id)contentData responseObject:(NSObject *)responseObject classNameInArray:(NSString *)className{
+    if (![responseObject isKindOfClass:[NSMutableArray class]]) {//通过配置文件赋值
+        [self responseObjectFromConfig:configModel contentData:contentData responseObject:responseObject];
+    }else{//不经过配置文件赋值，直接反射成数组
+        if (![contentData isKindOfClass:[NSArray class]]) {
+            NCLog(@"返回的数据并不是数组");
+            return;
+        }
+        NSArray *arrContent = (NSArray *)contentData;
+        //parseArrayData
+        NSArray *objects = [Reflection parseArrayData:arrContent classNameInArray:className];
+        NSMutableArray *mutableArray = (NSMutableArray *)responseObject;
+        [mutableArray addObjectsFromArray:objects];
+    }
+}
+
 - (void)responseObjectFromConfig:(NetConfigModel *)configModel contentData:(id)contentData responseObjects:(NSArray *)responseObjects{
     for (NSObject *object in responseObjects) {
         [self responseObjectFromConfig:configModel contentData:contentData responseObject:object];

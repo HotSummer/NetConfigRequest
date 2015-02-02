@@ -45,6 +45,17 @@ NetConfigReflectProtocol
 - (void)responseObjectFromConfig:(NetConfigModel *)configModel contentData:(id)contentData responseObject:(NSObject *)responseObject;
 
 /**
+ *  根据配制数据（configModel）,数据（contentData） 和对象（responseObject， 返回数据的对象）填充返回对象
+ *
+ *  @param configModel    配制数据
+ *  @param contentData    数据
+ *  @param responseObject 对象
+ *  @param classNameInArray 当responseObject为NSMutableArray时，需要通过classNameInArray指定数组里面数据的类名
+ *
+ */
+- (void)responseObjectFromConfig:(NetConfigModel *)configModel contentData:(id)contentData responseObject:(NSObject *)responseObject classNameInArray:(NSString *)className;
+
+/**
  *  根据配制数据（configModel）,数据（contentData） 和对象数组（responseObject， 返回数据的对象）填充返回对象数组
  *
  *  @param configModel     配制数据

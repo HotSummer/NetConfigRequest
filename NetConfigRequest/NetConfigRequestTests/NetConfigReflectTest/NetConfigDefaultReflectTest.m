@@ -65,6 +65,10 @@
     [netConfigReflect responseObjectFromConfig:model1 contentData:dic responseObject:checkoutDataHandler];
     NCLog(@"%@", checkoutDataHandler.checkoutamount.amount);
     
+    NSArray *arr = @[@{@"amount":@"hehehehehhe"}, @{@"amount":@"xxxxxxx"}, @{@"amount":@"oooooooo"}];
+    NSMutableArray *arrObjects = [NSMutableArray array];
+    [netConfigReflect responseObjectFromConfig:nil contentData:arr responseObject:arrObjects classNameInArray:@"Checkoutamount"];
+    
 }
 
 @end
