@@ -14,6 +14,8 @@
  */
 @interface NetConfigInput : NSObject<NetConfigInputProtocol>
 
++ (NetConfigInput *)shareInstance;
+
 - (NSString *)urlHttp;
 - (NSString *)urlHttps;
 - (NSString *)userToken;

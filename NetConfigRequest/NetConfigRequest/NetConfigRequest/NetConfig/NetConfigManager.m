@@ -50,6 +50,31 @@
     return self;
 }
 
+- (void)request:(NSString *)modelKey requestObject:(NSObject *)req responseArray:(NSMutableArray *)resArr classNameInArray:(NSString *)className response:(ResponseBlock)resblock{
+    NetConfigModel *model = [_netConfigModel getModel:modelKey];
+    
+    //在body中的签名
+    NSString *signBody = [_netConfigSign signString:[_netConfigInput dicSign]];
+    //请求参数
+    NSDictionary *dicRequest = [_netConfigReflect requestDataFromConfig:model requestObject:req];
+    NSMutableDictionary *mutableDicRequest = [NSMutableDictionary dictionaryWithDictionary:dicRequest];
+    [mutableDicRequest setObject:signBody forKey:@"apiSign"];
+    
+    //url
+    NSString *url = [_netConfigRequestData urlByModel:model];
+    //是否身份验证
+    BOOL ssl = [_netConfigRequestData sslByModel:model];
+    
+    //header签名
+    NSString *signHeader = [_netConfigSign headerSignString:[_netConfigInput dicSign]];
+    
+    //请求
+    [_request request:url sign:signHeader ssl:ssl method:model.method requestParmers:mutableDicRequest response:^(int code, NSString *message, id content, NSError *error) {
+        [_netConfigReflect responseObjectFromConfig:model contentData:content responseObject:resArr classNameInArray:className];
+        resblock(code, message, content, error);
+    }];
+}
+
 - (void)request:(NSString *)modelKey requestObject:(NSObject *)req responseObject:(NSObject *)res
        response:(ResponseBlock)resblock{
     NetConfigModel *model = [_netConfigModel getModel:modelKey];

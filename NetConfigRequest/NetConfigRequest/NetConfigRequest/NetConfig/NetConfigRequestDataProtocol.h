@@ -13,12 +13,9 @@
 
 @protocol NetConfigRequestDataProtocol <NSObject>
 
-- (NSString *)url;
-- (NSDictionary *)baseRequestData;
-
 //url
 - (NSString *)urlByModel:(NetConfigModel *)model;
 //ssl
-- (NSString *)sslByModel:(NetConfigModel *)model;
+- (BOOL)sslByModel:(NetConfigModel *)model;
 
 @end

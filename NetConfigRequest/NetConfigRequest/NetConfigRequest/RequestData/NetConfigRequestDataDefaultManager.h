@@ -14,9 +14,6 @@
 NetConfigRequestDataProtocol
 >
 
-- (NSString *)url;
-- (NSDictionary *)baseRequestData;
-
 /**
  *  获取网络配制model的请求url
  *

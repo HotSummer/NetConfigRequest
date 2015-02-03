@@ -10,6 +10,15 @@
 
 @implementation NetConfigInput
 
++ (NetConfigInput *)shareInstance{
+    static NetConfigInput *netConfigInput = nil;
+    static dispatch_once_t predicate;
+    dispatch_once(&predicate, ^{
+        netConfigInput = [[NetConfigInput alloc] init];
+    });
+    return netConfigInput;
+}
+
 - (NSString *)urlHttp{
     return @"http://";
 }

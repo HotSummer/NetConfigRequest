@@ -11,16 +11,8 @@
 
 @implementation NetConfigRequestDataDefaultManager
 
-- (NSString *)url{
-    return nil;
-}
-
-- (NSDictionary *)baseRequestData{
-    return nil;
-}
-
 - (NSString *)urlByModel:(NetConfigModel *)model{
-    NSString *url = @"";//[NetConfigInput urlHttp];
+    NSString *url = [[NetConfigInput shareInstance] urlHttp];
     
     return [NSString stringWithFormat:@"%@%@", url, model.serverName];//@"";
 }
