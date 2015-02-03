@@ -31,8 +31,9 @@
     // This is an example of a functional test case.
 //    [NetConfigModelDefaultManagerTest test];
 //    [NetConfigDefaultReflectTest test];
-    [NetConfigDefaultReflectTest test2];
+//    [NetConfigDefaultReflectTest test2];
     [NetConfigDefaultReflectTest test3];
+//    [NetConfigDefaultReflectTest test4];
     XCTAssert(YES, @"Pass");
 }
 

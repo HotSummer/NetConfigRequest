@@ -10,4 +10,13 @@
 
 @implementation VSAddressDataHandler
 
++ (VSAddressDataHandler *)shareInstance{
+    static VSAddressDataHandler *dataHandler = nil;
+    static dispatch_once_t predicate;
+    dispatch_once(&predicate, ^{
+        dataHandler = [[VSAddressDataHandler alloc] init];
+    });
+    return dataHandler;
+}
+
 @end

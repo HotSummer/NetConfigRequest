@@ -12,4 +12,6 @@
 
 @property(nonatomic, strong) NSString *selectedAreaId;
 
++ (VSAddressDataHandler *)shareInstance;
+
 @end

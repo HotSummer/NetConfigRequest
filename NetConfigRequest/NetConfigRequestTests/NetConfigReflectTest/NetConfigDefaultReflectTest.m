@@ -53,10 +53,9 @@
 
 + (void)test3{
     NetConfigModel *model1 = [[NetConfigModel alloc] init];
-    // "data.amount":"VSCheckoutDataHandler.checkoutamount"
     model1.resParam = @{@"data":@"VSCheckoutDataHandler.checkoutamount"};
     
-    NSDictionary *dic = @{@"data":@{@"amount":@"hehehehehhe"}};
+    NSDictionary *dic = @{@"data":@{@"amounts":@"hehehehehhe"}};
     
     VSCheckoutDataHandler *checkoutDataHandler = [[VSCheckoutDataHandler alloc] init];
     
@@ -68,6 +67,20 @@
     NSArray *arr = @[@{@"amount":@"hehehehehhe"}, @{@"amount":@"xxxxxxx"}, @{@"amount":@"oooooooo"}];
     NSMutableArray *arrObjects = [NSMutableArray array];
     [netConfigReflect responseObjectFromConfig:nil contentData:arr responseObject:arrObjects classNameInArray:@"Checkoutamount"];
+}
+
++ (void)test4{
+    //responseObjectFromConfig:(NetConfigModel *)configModel contentData:(id)contentData responseObjects:(NSArray *)responseObjects
+    NetConfigDefaultReflect *netConfigReflect = [[NetConfigDefaultReflect alloc] init];
+    NetConfigModel *model1 = [[NetConfigModel alloc] init];
+    model1.resParam = @{@"data.areaIds":@"VSAddressDataHandler.selectedAreaId", @"data.couponType":@"VSDiscountInterface.item.availabletypes", @"data.favourableId":@"VSDiscountInterface.item.availablefid"};
+    NSDictionary *dic = @{@"data":@{@"areaIds":@"hehehehehhe", @"couponType":@"xxxxxxx", @"favourableId":@"oooooooo"}};
+    
+    VSDiscountInterface *discountInterface = [[VSDiscountInterface alloc] init];
+    [netConfigReflect responseObjectFromConfig:model1 contentData:dic responseObjects:@[discountInterface]];
+    
+    VSAddressDataHandler *addressData = [VSAddressDataHandler shareInstance];
+    NCLog(@"%@, %@, %@", addressData.selectedAreaId, discountInterface.item.availabletype, discountInterface.item.availablefid);
     
 }
 

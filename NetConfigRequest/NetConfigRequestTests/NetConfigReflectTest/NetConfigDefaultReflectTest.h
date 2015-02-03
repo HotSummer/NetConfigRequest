@@ -18,4 +18,7 @@
 //测试responseObjectFromConfig:contentData:responseObject:
 + (void)test3;
 
+//测试- (void)responseObjectFromConfig:(NetConfigModel *)configModel contentData:(id)contentData responseObjects:(NSArray *)responseObjects
++ (void)test4;
+
 @end

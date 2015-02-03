@@ -98,7 +98,6 @@
         
         for (int i = 1; i<valueArr.count; i++) {
             if ([ReflectionException hasKey:object.class propertyName:valueArr[i]]) {
-                
                 //获取属性的类型
                 NSString *className = [ReflectionProperty type:object.class propertyName:valueArr[i]];
                 //如果基础类型直接赋值
@@ -114,14 +113,15 @@
                         [objSuper setValue:object forKey:valueArr[i]];
                     }
                 }
-                
             }
         }
         
         //赋值
         [Reflection objectFromContent:value object:&object];
-        
-        [objSuper setValue:object forKey:valueArr.lastObject];
+        //有这个属性
+        if ([ReflectionException hasKey:objSuper.class propertyName:valueArr.lastObject]) {
+            [objSuper setValue:object forKey:valueArr.lastObject];
+        }
     }];
 }
 
